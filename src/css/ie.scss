@@ -1,0 +1,26 @@
+/* --------------------------------------------------------------
+	ie.css
+	for IE8-
+	© sacripant.fr
+-------------------------------------------------------------- */
+/*
+Hacks pour cibler les différentes versions :
+
+Sélecteurs
+==========
+
+*+html {}  // IE7 only
+* html {}  // IE6 only
+
+attributs
+=========
+
+body {
+ color : orange\9;  // IE8 et inferieur
+*color : yellow; // IE7 and below
+ _color : orange;  // IE6
+}
+*/
+
+	
+

@@ -1,0 +1,14 @@
+
+
+build/*.html
+build/css
+build/fonts/*
+build/img/icons/*.svg
+build/js/modernizr-custom.js
+
+
+node_modules/
+.sass-cache/
+
+
+docs/your-project-icons.html

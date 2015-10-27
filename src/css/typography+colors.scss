@@ -1,0 +1,250 @@
+@import "_config";
+/* -------------------------------------------------------------- 
+   
+	typography+colors.css
+	* Default colors class
+	* Sets up some sensible default typography.
+	* Thanks to Boilerplate, Knacss and blueprint
+	© sacripant.fr
+
+	TOC :
+	* Colors
+	* Vertical rythme
+	* Default font settings
+	* Sizes
+	* Text elements
+	* Lists
+	* Tables
+	* Texte selection
+	* hr
+	* typographic utils class
+
+-------------------------------------------------------------- */
+
+/*	
+*	Colors
+*/
+
+.txt-color	{ color: $txt-color; }
+.h-color	{ color: $h-color; }
+
+
+/*
+*   Vertical rythme
+*   Default vertical rythme and gutter size are identic
+*/
+.v-space,
+.vsapce
+{
+    margin-bottom: $vr+em;
+    margin-bottom: $vr+rem;
+}
+
+
+
+
+/* 
+*	Default font settings. 
+*/
+html {
+	font-size: 100%; /*default 16px*/
+}
+body { 
+	font-size: 1em;
+	line-height: $vr;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+	color: $txt-color; 
+	background: #fff;
+}
+
+
+/* 
+*	Headings
+*	Define modules size
+* quotient : 1.1667 (http://instacalc.com/17574)
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6
+	{ font-weight: normal; color: $h-color; margin-bottom: $vr+rem; }
+
+h1, .h1 { font-size: $fs-h1+em;	line-height: 1;		 }
+h2, .h2 { font-size: $fs-h2+em;	line-height: 1.1;	 }
+h3, .h3 { font-size: $fs-h3+em;	line-height: 1.1;	 }
+h4, .h4 { font-size: $fs-h4+em;	line-height: 1.2;	 }
+h5, .h5 { font-size: $fs-h5+em;	line-height: 1.2;	 }
+h6, .h6 { font-size: $fs-h6+em;	line-height: 1.285;	 }
+
+/* avoid collapsing margins on headings */
+h1:first-child, h2:first-child,
+h3:first-child, h4:first-child,
+h5:first-child, h6:first-child {
+	margin-top: 0;
+}
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+	margin: 0;
+}
+
+/*Complementary sizes*/
+
+small, 
+.small		{ font-size: $fs-small+em } /* *small size */
+.xsmall		{ font-size: $fs-xsmall+em }
+.big		{ font-size: $fs-h6+em }
+.xbig		{ font-size: $fs-h5+em }
+
+
+/* 
+*	Text elements
+*/
+
+p 		{
+	margin-bottom: $vr+em; 
+	hyphens: auto;
+}
+p, .p 	{
+	font-size: 1em; 
+}
+
+/*Links*/
+a:focus 		{ outline: thin dotted; }
+a:active,a:hover
+				{ outline: 0; }
+a:focus, 
+a:hover     { color: #000; text-decoration: underline; }
+a           { color: #009; text-decoration: none; }
+
+/*citations*/
+blockquote, q 	{ quotes: none; }
+blockquote:before, blockquote:after, 
+q:before, q:after 
+				{ content: ''; content: none; }
+blockquote  	{ margin: $vr+em; color: #666; font-style: italic; }
+
+
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+
+sub, sup 	{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup 		{ top: -0.5em; }
+sub 		{ bottom: -0.25em; }
+    	
+abbr		{ border-bottom: 1px dotted #666; }
+address     { margin-bottom: $vr+em; font-style: italic; }
+del         { color:#666; }
+
+/*Code / pre*/
+pre, code, kbd, samp 	{ font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; line-height: $vr;}
+pre 					{ margin-bottom: $vr+em;  white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Addresses styling not present in IE 6/7/8/9. */
+mark { background: #ff0; color: #000; }
+
+
+/* 
+*	Lists
+*/
+
+li ul, 
+li ol       { margin:0 $vr+em; }
+ul, ol      { margin: 0 $vr+em $vr+em $vr+em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 $vr+em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: $vr+em;}
+
+/* avoid margins on nested elements */
+li p,
+li ul,
+li ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/* 
+*	Tables
+*/
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-bottom: $vr+em;
+	width: 100%
+}
+
+table,td,th {
+	vertical-align:middle
+}
+thead th {
+	border-bottom: 1px solid;
+}
+
+th,td,caption {
+	text-align:left;
+	font-weight:400;
+	padding:4px 10px 4px 5px
+}
+th {
+	font-weight:700;
+}
+
+tr.even td {
+	background: hsla(0, 0%, 0%, 0.05);
+}
+
+tfoot {
+	font-style:italic
+}
+
+caption {
+	font-size: $fs-small+em;
+	text-transform: uppercase;
+	border-bottom: 1px solid;
+}
+
+
+
+
+/* 
+*	Text-selection colors 
+*	* remove any text shadows: twitter.com/miketaylr/status/12228805301) 
+*/
+::selection { background: #fcd700; color: #fff; text-shadow: none; }
+
+/* 
+*	HR
+*/
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+
+/*
+*	typographic utils class
+*/
+
+/*	Initialize list (remove list-type type and margin) */
+.nude { list-style-type: none; margin: 0; }
+
+
+/*	add ... for too long one line text  */
+.ellipsis {
+    overflow: hidden;        
+    white-space: nowrap;     
+    text-overflow: ellipsis;
+}
+
+/*	Texte align */
+.txt-left	{
+	text-align: left;
+}
+.txt-right {
+	text-align: right;
+}
+.txt-center {
+	text-align: center;
+}

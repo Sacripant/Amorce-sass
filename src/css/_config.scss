@@ -1,0 +1,45 @@
+// font-size ratio
+$fs-ratio : 1.1667;
+
+// Size
+$fs-h6 : $fs-ratio;
+$fs-h5 : $fs-ratio*$fs-h6;
+$fs-h4 : $fs-ratio*$fs-h5;
+$fs-h3 : $fs-ratio*$fs-h4;
+$fs-h2 : $fs-ratio*$fs-h3;
+$fs-h1 : $fs-ratio*$fs-h2;
+$fs-h0 : $fs-ratio*$fs-h1;
+$fs-small : 1/$fs-ratio;
+$fs-xsmall : $fs-small/$fs-ratio;
+
+// Vertical rythme
+$vr: 1.5;
+
+// v-gutter (based vertical rythme )
+$gutter : $vr;
+$gutter-half : $gutter/2;
+
+//	Colors
+$txt-color : hsl(0, 0%, 30%);
+$h-color : hsl(0, 0%, 15%);
+
+//	Colors notifs
+$color-error   : hsl(0, 75%, 45%);
+$color-error-bg: hsl(0, 35%, 90%);
+
+$color-notice   : hsl(30, 85%, 38%);
+$color-notice-bg: hsl(40, 35%, 90%);
+
+$color-success   : hsl(91, 77%, 15%);
+$color-success-bg: hsl(72, 58%, 85%);
+
+
+//	custom-medias
+$maxXS: "max-width: 29.999em";
+$minS: "min-width: 30em";
+$maxS: "max-width: 47.999em";
+$minM: "min-width: 48em";
+$maxM: "max-width: 59.999em";
+$minL: "min-width: 60em";
+$maxL: "max-width: 79.999em";
+$minXL: "min-width: 80em";
